@@ -32,11 +32,11 @@ def fetch_btcusdt_tick_data(api_key, api_secret, start_str, end_str):
     # In a real scenario, you must populate this from a live WebSocket feed.
     data = {
         'timestamp': pd.to_datetime(range(1000), unit='ms'),
-        'last_price': [29000 + i*0.01 + (0.1 * (-1)**i) for i in range(1000)],
+        'last_price': [99000 + i*0.01 + (0.1 * (-1)**i) for i in range(1000)],
         'trade_volume': [0.1 + i*0.001 for i in range(1000)],
-        'best_bid': [28999.99 + i*0.01 for i in range(1000)],
+        'best_bid': [98999.99 + i*0.01 for i in range(1000)],
         'bid_qty': [1.5 - i*0.001 for i in range(1000)],
-        'best_ask': [29000.01 + i*0.01 for i in range(1000)],
+        'best_ask': [99000.01 + i*0.01 for i in range(1000)],
         'ask_qty': [1.2 + i*0.001 for i in range(1000)],
     }
     df = pd.DataFrame(data)
